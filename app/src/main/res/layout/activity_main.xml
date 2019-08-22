@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical"
+    tools:context="com.jyj.notificationlistenerservice.MainActivity1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/mTittle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="监听消息"
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnPermission"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="打开权限" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/mTittle"
+        android:background="#55999999" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/btnDef"
+            android:background="@null"
+            android:hint="默认url=http://proxy.zndata.store:8888/checkout/listener/  \n可输入确认修改"
+            android:minHeight="40dp"
+            android:paddingLeft="15dp" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnSure"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="确定" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnDef"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_below="@id/btnSure"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="恢复默认" />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mTittle"
+        android:layout_marginTop="10dp" />
+</LinearLayout>
